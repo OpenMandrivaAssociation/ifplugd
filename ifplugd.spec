@@ -10,6 +10,7 @@ Patch3:		ifplugd-0.28-onlink.patch
 License:	GPL
 Group:		System/Configuration/Networking
 URL:		http://0pointer.de/lennart/projects/ifplugd/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	doxygen lynx pkgconfig libdaemon-devel
 
 %description
