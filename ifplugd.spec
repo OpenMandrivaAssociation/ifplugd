@@ -32,12 +32,12 @@ when a cable is really connected.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
-rm -f $RPM_BUILD_ROOT%{_sysconfdir}/init.d/ifplugd
+rm -f %{buildroot}%{_sysconfdir}/init.d/ifplugd
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
