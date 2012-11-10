@@ -1,0 +1,12 @@
+--- ifplugd-0.28/conf/ifplugd.action.onlink	2007-02-25 12:05:22.000000000 +0100
++++ ifplugd-0.28/conf/ifplugd.action	2007-02-25 14:39:40.000000000 +0100
+@@ -26,7 +26,7 @@
+ 
+ mdv-network-event link_$2 $1 || /bin/true
+ 
+-[ "$2" = "up" ] && exec /sbin/ifup $1
+-[ "$2" = "down" ] && exec /sbin/ifdown $1
++[ "$2" = "up" ] && exec /sbin/ifup $1 onlink
++[ "$2" = "down" ] && exec /sbin/ifdown $1 onlink
+ 
+ exit 1

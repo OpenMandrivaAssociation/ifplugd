@@ -1,0 +1,10 @@
+--- ifplugd-0.28/src/interface.c.include	2005-01-05 01:25:31.000000000 +0100
++++ ifplugd-0.28/src/interface.c	2006-07-20 20:27:44.000000000 +0200
+@@ -22,6 +22,7 @@
+ #include <config.h>
+ #endif
+ 
++#define __KERNEL_STRICT_NAMES
+ #include <linux/sockios.h>
+ #include <linux/if_ether.h>
+ #include <sys/types.h>

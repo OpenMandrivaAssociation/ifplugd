@@ -1,0 +1,11 @@
+--- ifplugd-0.28/conf/ifplugd.action.event	2004-03-03 02:02:18.000000000 +0100
++++ ifplugd-0.28/conf/ifplugd.action	2006-07-25 15:32:00.000000000 +0200
+@@ -24,6 +24,8 @@
+ 	exit 1
+ fi
+ 
++mdv-network-event link_$2 $1 || /bin/true
++
+ [ "$2" = "up" ] && exec /sbin/ifup $1
+ [ "$2" = "down" ] && exec /sbin/ifdown $1
+ 
