@@ -1,7 +1,7 @@
 Summary:	Detect and perform actions when an ethernet cable is (un)plugged
 Name:		ifplugd
-Version: 	0.28
-Release: 	%mkrel 16
+Version:	0.28
+Release:	17
 Source0:	http://0pointer.de/lennart/projects/ifplugd/%{name}-%{version}.tar.bz2
 Patch0:		ifplugd-0.28-exit-status.patch
 Patch1:		ifplugd-0.28-event.patch
@@ -10,8 +10,9 @@ Patch3:		ifplugd-0.28-onlink.patch
 License:	GPL
 Group:		System/Configuration/Networking
 URL:		http://0pointer.de/lennart/projects/ifplugd/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	doxygen lynx pkgconfig libdaemon-devel
+BuildRequires:	doxygen
+BuildRequires:	lynx
+BuildRequires:	libdaemon-devel
 
 %description
 ifplugd is a Linux daemon which will automatically configure your
@@ -32,15 +33,10 @@ when a cable is really connected.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-rm -f $RPM_BUILD_ROOT%{_sysconfdir}/init.d/ifplugd
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+rm -f %{buildroot}%{_sysconfdir}/init.d/ifplugd
 
 %files
-%defattr(-,root,root)
 %doc doc/README doc/NEWS doc/README.html doc/style.css LICENSE
 /sbin/ifplugd
 /sbin/ifplugstatus
@@ -126,10 +122,10 @@ rm -rf $RPM_BUILD_ROOT
 * Sun Dec 19 2004 Mandrakelinux Team <http://www.mandrakeexpert.com> 0.26-1mdk
 - New release 0.26
 
-* Sun May 30 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 0.25-1mdk
+* Sun May 30 2004 Per Ã˜yvind Karlsen <peroyvind@linux-mandrake.com> 0.25-1mdk
 - 0.25
 
-* Sun Apr 18 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 0.24-1mdk
+* Sun Apr 18 2004 Per Ã˜yvind Karlsen <peroyvind@linux-mandrake.com> 0.24-1mdk
 - 0.24
 - libdaemon 0.6
 - updated url
