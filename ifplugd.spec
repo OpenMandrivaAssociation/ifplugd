@@ -1,7 +1,7 @@
 Summary:	Detect and perform actions when an ethernet cable is (un)plugged
 Name:		ifplugd
 Version:	0.28
-Release:	22
+Release:	23
 License:	GPLv2
 Group:		System/Configuration/Networking
 Url:		http://0pointer.de/lennart/projects/ifplugd/
