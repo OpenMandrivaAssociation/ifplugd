@@ -1,7 +1,7 @@
 Summary:	Detect and perform actions when an ethernet cable is (un)plugged
 Name:		ifplugd
 Version:	0.28
-Release:	25
+Release:	26
 License:	GPLv2
 Group:		System/Configuration/Networking
 Url:		http://0pointer.de/lennart/projects/ifplugd/
@@ -26,7 +26,7 @@ when a cable is really connected.
 %apply_patches
 
 %build
-%configure2_5x	--sbindir=/sbin
+%configure --sbindir=/sbin
 %make
 
 %install
@@ -42,4 +42,3 @@ rm -f %{buildroot}%{_sysconfdir}/init.d/ifplugd
 /sbin/ifplugstatus
 %{_mandir}/man?/ifplugd*
 %{_mandir}/man?/ifplugstatus*
-
