@@ -26,7 +26,7 @@ when a cable is really connected.
 %apply_patches
 
 %build
-%configure --sbindir=/sbin --without-initdir
+%configure --sbindir=/sbin --with-initdir="%{_sysconfdir}/init.d"
 %make
 
 %install
