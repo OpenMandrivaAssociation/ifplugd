@@ -23,7 +23,7 @@ when a cable is really connected.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure --sbindir=/sbin --with-initdir="%{_sysconfdir}/init.d"
