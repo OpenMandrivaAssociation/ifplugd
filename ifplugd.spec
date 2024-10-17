@@ -4,7 +4,7 @@ Version:	0.28
 Release:	27
 License:	GPLv2
 Group:		System/Configuration/Networking
-Url:		http://0pointer.de/lennart/projects/ifplugd/
+Url:		https://0pointer.de/lennart/projects/ifplugd/
 Source0:	http://0pointer.de/lennart/projects/ifplugd/%{name}-%{version}.tar.bz2
 Patch0:		ifplugd-0.28-exit-status.patch
 Patch1:		ifplugd-0.28-event.patch
