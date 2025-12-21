@@ -10,6 +10,11 @@ Patch0:		ifplugd-0.28-exit-status.patch
 Patch1:		ifplugd-0.28-event.patch
 Patch2:		ifplugd-0.28-include.patch
 Patch3:		ifplugd-0.28-onlink.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	lynx
 BuildRequires:	pkgconfig(libdaemon)
